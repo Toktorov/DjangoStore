@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+{% block content %}
+<div id="fh5co-product">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <span>Cool Stuff</span>
+                <h2>Products.</h2>
+                <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem
+                    provident. Odit ab aliquam dolor eius.</p>
+            </div>
+        </div>
+        {% for category in categories %}
+        <div class="row">
+            <div class="col-md-4 text-center animate-box">
+                <div class="product">
+                    <div class="product-grid" style="background-image:url(images/product-1.jpg);">
+                        <div class="inner">
+                            <p>
+                                <a href="single.html" class="icon"><i class="icon-shopping-cart"></i></a>
+                                <a href="single.html" class="icon"><i class="icon-eye"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <h3><a href="single.html">{{ category.title }} {{category.product_category.all.count }}</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

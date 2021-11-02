@@ -19,6 +19,26 @@ class Category(models.Model):
     def __str__(self):
         return f"{self.title} -- {self.slug}"
 
+class CategoryImage(models.Model):
+    image = models.ImageField(
+        upload_to='category',
+        verbose_name='Картинки',
+        blank=True, null=True
+    )
+    category = models.ForeignKey(
+        Category, on_delete=models.CASCADE,
+        related_name='categry_image'
+    )
+
+    def __str__(self):
+        return f"{self.id}"
+
+
+    class Meta:
+        verbose_name = 'Изображение продукта'
+        verbose_name_plural = 'Изображении продуктов'
+        ordering = ('-id',)
+
 
 def slag_pre_save_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:

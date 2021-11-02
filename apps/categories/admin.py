@@ -1,5 +1,14 @@
 from django.contrib import admin
-from apps.categories.models import Category
+from apps.categories import models
 
 # Register your models here.
-admin.site.register(Category)
+class CategoryImageAdmin(admin.TabularInline):
+    model = models.CategoryImage
+    extra = 1
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ['title']
+    search_fields = ['title']
+    inlines = [CategoryImageAdmin]
+
+admin.site.register(models.Category, CategoryAdmin)

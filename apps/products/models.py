@@ -33,8 +33,8 @@ class Product(models.Model):
     )
 
     class Meta:
-        verbose_name = 'ПРОДУКТ'
-        verbose_name_plural = 'ПРОДУКТЫ'
+        verbose_name = 'Продукт'
+        verbose_name_plural = 'Продукты'
         ordering = ('-id',)
 
     def __str__(self):
@@ -54,6 +54,12 @@ class ProductImage(models.Model):
 
     def __str__(self):
         return f"{self.product.title} -- {self.product.id}"
+
+
+    class Meta:
+        verbose_name = 'Изображение продукта'
+        verbose_name_plural = 'Изображении продуктов'
+        ordering = ('-id',)
 
 
 def slag_pre_save_receiver(sender, instance, *args, **kwargs):
