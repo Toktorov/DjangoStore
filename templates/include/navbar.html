@@ -2,19 +2,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-xs-2">
-                <div id="fh5co-logo"><a href="index.html">Shop.</a></div>
+                <div id="fh5co-logo"><a href="{% url 'category_index' %}">Shop</a></div>
             </div>
             <div class="col-md-6 col-xs-6 text-center menu-1">
                 <ul>
                     <li class="has-dropdown">
-                        <a href="product.html">Shop</a>
+                        <a href="{% url 'category_index' %}">Главная</a>
                         <ul class="dropdown">
-                            <li><a href="single.html">Single Shop</a></li>
+                            <li><a href="single.html">Категории</a></li>
+                            <li><a href="single.html">Новинки</a></li>
                         </ul>
                     </li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">О нас</a></li>
                     <li class="has-dropdown">
-                        <a href="services.html">Services</a>
+                        <a href="services.html">Товары</a>
                         <ul class="dropdown">
                             <li><a href="#">Web Design</a></li>
                             <li><a href="#">eCommerce</a></li>
@@ -22,7 +23,15 @@
                             <li><a href="#">API</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html">Контакты</a>
+                        <ul class="dropdown">
+                            <li><a href="tel: +99677777777">+99677777777</a></li>
+                            <li><a href="tel: +99633333333">+99633333333</a></li>
+                            <li><a href="tel: +99666666666">+99666666666</a></li>
+                            <li><a href="tel: +996555555555">+996555555555</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
