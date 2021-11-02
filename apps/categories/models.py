@@ -27,7 +27,7 @@ class CategoryImage(models.Model):
     )
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE,
-        related_name='categry_image'
+        related_name='category_image'
     )
 
     def __str__(self):

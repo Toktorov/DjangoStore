@@ -10,25 +10,24 @@
                     provident. Odit ab aliquam dolor eius.</p>
             </div>
         </div>
-        {% for category in categories %}
-        <div class="row">
-            <div class="col-md-4 text-center animate-box">
-                <div class="product">
-                    <div class="product-grid" style="background-image:url(images/product-1.jpg);">
-                        <div class="inner">
-                            <p>
-                                <a href="single.html" class="icon"><i class="icon-shopping-cart"></i></a>
-                                <a href="single.html" class="icon"><i class="icon-eye"></i></a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h3><a href="single.html">{{ category.title }} {{category.product_category.all.count }}</a></h3>
-                    </div>
+    </div>
+</div>
+<div class="container">
+    {% for category in categories %}
+    <div class="card">
+        <div class="col-md-4 text-center animate-box">
+            <div class="product">
+                <div class="product-grid">
+                    {% for image in category.category_image.all %}
+                    <img src="{{ image.image.url }}" alt="" height="350px" width="350px">
+                    {% endfor %}
+                </div>
+                <div class="desc">
+                    <h3><a href="single.html">{{ category.title }} {{category.product_category.all.count }}</a></h3>
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 </div>
 {% endblock %}
