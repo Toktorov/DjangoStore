@@ -8,3 +8,9 @@ class CategoryIndexView(generic.ListView):
     model = Category
     template_name = 'categories/index.html'
     context_object_name = 'categories'
+
+
+class CategoryDetailView(generic.DetailView):
+    model = Category
+    template_name = 'categories/detail.html'
+    context_object_name = 'category'

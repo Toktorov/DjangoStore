@@ -1,18 +1,16 @@
-{% extends 'index.html' %}
+{% extends 'category_index.html' %}
 {% block content %}
 <div id="fh5co-product">
     <div class="container">
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                <span>Django Shop</span>
-                <h2>Категории</h2>
-                <p>Здесь вы можете найти товары по вашему вкусу. Нажмите на товар который вам понравилось</p>
+                <h2>{{ category.title }}</h2>
             </div>
         </div>
     </div>
 </div>
 <div class="container">
-    {% for category in categories %}
+    {% for product in category.product_category.all %}
     <div class="card">
         <div class="col-md-4 text-center animate-box">
             <div class="product">
@@ -22,7 +20,9 @@
                     {% endfor %}
                 </div>
                 <div class="desc">
-                    <h3><a href="single.html">{{ category.title }} {{category.product_category.all.count }}</a></h3>
+                    <h3><a href="single.html">{{ product.title }}</a></h3>
+                    <p>{{ product.description |truncatewords:10 }}</p>
+                    
                 </div>
             </div>
         </div>
