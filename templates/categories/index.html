@@ -18,11 +18,11 @@
             <div class="product">
                 <div class="product-grid">
                     {% for image in category.category_image.all %}
-                    <img src="{{ image.image.url }}" alt="" height="100%" width="100%">
+                    <a href="{% url 'category_detail' category.slug %}"><img src="{{ image.image.url }}" alt="" height="100%" width="100%"></a>
                     {% endfor %}
                 </div>
                 <div class="desc">
-                    <h3><a href="single.html">{{ category.title }} {{category.product_category.all.count }}</a></h3>
+                    <h3><a href="{% url 'category_detail' category.slug %}">{{ category.title }} {{category.product_category.all.count }}</a></h3>
                 </div>
             </div>
         </div>
