@@ -12,7 +12,8 @@
 		content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
 	<meta name="author" content="gettemplates.co" />
 
-	<link rel="shortcut icon" type="image/x-icon" href="https://www.pngall.com/wp-content/uploads/2016/07/Online-Shopping-PNG-Clipart.png">
+	<link rel="shortcut icon" type="image/x-icon"
+		href="https://www.pngall.com/wp-content/uploads/2016/07/Online-Shopping-PNG-Clipart.png">
 
 	<!-- 
 	//////////////////////////////////////////////////////
@@ -81,78 +82,19 @@
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-					<li style="background-image: url(images/img_bg_1.jpg);">
-						<div class="overlay-gradient"></div>
-						<div class="container">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
-								<div class="slider-text-inner">
-									<div class="desc">
-										<span class="price">$800</span>
-										<h2>Alato Cabinet</h2>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and
-											Consonantia, there live the blind texts. Separated they live in
-											Bookmarksgrove.</p>
-										<p><a href="single.html" class="btn btn-primary btn-outline btn-lg">Purchase
-												Now</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style="background-image: url(images/img_bg_8.jpg);">
-						<div class="container">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
-								<div class="slider-text-inner">
-									<div class="desc">
-										<span class="price">$530</span>
-										<h2>The Haluz Rocking Chair</h2>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and
-											Consonantia, there live the blind texts. Separated they live in
-											Bookmarksgrove.</p>
-										<p><a href="single.html" class="btn btn-primary btn-outline btn-lg">Purchase
-												Now</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style="background-image: url(images/img_bg_3.jpg);">
-						<div class="container">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
-								<div class="slider-text-inner">
-									<div class="desc">
-										<span class="price">$750</span>
-										<h2>Alato Cabinet</h2>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and
-											Consonantia, there live the blind texts. Separated they live in
-											Bookmarksgrove.</p>
-										<p><a href="single.html" class="btn btn-primary btn-outline btn-lg">Purchase
-												Now</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style="background-image: url(images/img_bg_4.jpg);">
-						<div class="container">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
-								<div class="slider-text-inner">
-									<div class="desc">
-										<span class="price">$540</span>
-										<h2>The WW Chair</h2>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and
-											Consonantia, there live the blind texts. Separated they live in
-											Bookmarksgrove.</p>
-										<p><a href="single.html" class="btn btn-primary btn-outline btn-lg">Purchase
-												Now</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
+					<img src="https://object.pscloud.io/cms/cms/SpecialOffers/img_5007_3_1.webp" alt="" height="100%"
+						width="100%">
+					<div class="overlay-gradient"></div>
 					</li>
 				</ul>
 			</div>
 		</aside>
+
+		
+
+		{% block content %}
+
+		{% endblock %}
 
 		<div id="fh5co-services" class="fh5co-bg-section">
 			<div class="container">
@@ -162,7 +104,7 @@
 							<span class="icon">
 								<i class="icon-credit-card"></i>
 							</span>
-							<h3>Credit Card</h3>
+							<h3>Без наличных</h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
 								there live the blind texts. Separated they live in Bookmarksgrove</p>
 							<p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
@@ -173,7 +115,7 @@
 							<span class="icon">
 								<i class="icon-wallet"></i>
 							</span>
-							<h3>Save Money</h3>
+							<h3>Дёшево</h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
 								there live the blind texts. Separated they live in Bookmarksgrove</p>
 							<p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
@@ -184,7 +126,7 @@
 							<span class="icon">
 								<i class="icon-paper-plane"></i>
 							</span>
-							<h3>Free Delivery</h3>
+							<h3>Бесплатная доставка</h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
 								there live the blind texts. Separated they live in Bookmarksgrove</p>
 							<p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
@@ -194,10 +136,62 @@
 			</div>
 		</div>
 
-		{% block content %}
-		
-		{% endblock %}
-		
+		<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
+			<div class="container">
+				<div class="row">
+					<div class="display-t">
+						<div class="display-tc">
+							<div class="col-md-3 col-sm-6 animate-box">
+								<div class="feature-center">
+									<span class="icon">
+										<i class="icon-eye"></i>
+									</span>
+
+									<span class="counter js-counter" data-from="0" data-to="22070" data-speed="5000"
+										data-refresh-interval="50">1</span>
+									<span class="counter-label">Посещений</span>
+
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 animate-box">
+								<div class="feature-center">
+									<span class="icon">
+										<i class="icon-shopping-cart"></i>
+									</span>
+
+									<span class="counter js-counter" data-from="0" data-to="450" data-speed="5000"
+										data-refresh-interval="50">1</span>
+									<span class="counter-label">Клиентов</span>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 animate-box">
+								<div class="feature-center">
+									<span class="icon">
+										<i class="icon-shop"></i>
+									</span>
+									<span class="counter js-counter" data-from="0" data-to="20" data-speed="5000"
+										data-refresh-interval="50">1</span>
+									<span class="counter-label">Товаров</span>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 animate-box">
+								<div class="feature-center">
+									<span class="icon">
+										<i class="icon-clock"></i>
+									</span>
+
+									<span class="counter js-counter" data-from="0" data-to="10" data-speed="5000"
+										data-refresh-interval="50">1</span>
+									<span class="counter-label">Лет на рынке</span>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div id="fh5co-testimonial" class="fh5co-bg-section">
 			<div class="container">
 				<div class="row animate-box">
@@ -257,61 +251,7 @@
 		</div>
 
 
-		<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
-			<div class="container">
-				<div class="row">
-					<div class="display-t">
-						<div class="display-tc">
-							<div class="col-md-3 col-sm-6 animate-box">
-								<div class="feature-center">
-									<span class="icon">
-										<i class="icon-eye"></i>
-									</span>
-
-									<span class="counter js-counter" data-from="0" data-to="22070" data-speed="5000"
-										data-refresh-interval="50">1</span>
-									<span class="counter-label">Посещений</span>
-
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6 animate-box">
-								<div class="feature-center">
-									<span class="icon">
-										<i class="icon-shopping-cart"></i>
-									</span>
-
-									<span class="counter js-counter" data-from="0" data-to="450" data-speed="5000"
-										data-refresh-interval="50">1</span>
-									<span class="counter-label">Клиентов</span>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6 animate-box">
-								<div class="feature-center">
-									<span class="icon">
-										<i class="icon-shop"></i>
-									</span>
-									<span class="counter js-counter" data-from="0" data-to="700" data-speed="5000"
-										data-refresh-interval="50">1</span>
-									<span class="counter-label">Товаров</span>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6 animate-box">
-								<div class="feature-center">
-									<span class="icon">
-										<i class="icon-clock"></i>
-									</span>
-
-									<span class="counter js-counter" data-from="0" data-to="10" data-speed="5000"
-										data-refresh-interval="50">1</span>
-									<span class="counter-label">Лет на рынке</span>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 
 		<div id="fh5co-started">
 			<div class="container">

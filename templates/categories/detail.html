@@ -11,12 +11,14 @@
 </div>
 <div class="container">
     {% for product in category.product_category.all %}
+    {% if product.title %}
     <div class="card">
         <div class="col-md-4 text-center animate-box">
             <div class="product">
                 <div class="product-grid">
                     {% for image in product.product_image.all %}
-                    <a href = "{% url 'product_detail' product.slug %}"><img src="{{ image.image.url }}" alt="" height="100%" width="100%"></a>
+                    <a href="{% url 'product_detail' product.slug %}"><img src="{{ image.image.url }}" alt=""
+                            height="100%" width="100%"></a>
                     {% endfor %}
                 </div>
                 <div class="desc">
@@ -26,6 +28,13 @@
             </div>
         </div>
     </div>
+    {% else %}
+    <div class="row animate-box">
+        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+            <h2 style = "margin-top: -100px;">Здесь пусто</h2>
+        </div>
+    </div>
+    {% endif %}
     {% endfor %}
 </div>
 {% endblock %}
