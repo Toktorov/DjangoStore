@@ -1,0 +1,29 @@
+{% extends 'users_index.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="mail_form">
+            <div class="row no-gutters">
+                <div class="col-lg-9 col-md-8">
+                    <h2>Sing in</h2>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="newsletter_field">Username</label>
+                            {{ form.username }}
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="newsletter_field">Password</label>
+                            {{ form.password }}
+                        </div>
+                        <button type="submit" class="genric-btn info-border radius">Submit</button>
+                    </form>
+                    <li><a class="genric-btn info-border radius" style = "margin-top: 20px;" href="#">Вход с гугл</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
