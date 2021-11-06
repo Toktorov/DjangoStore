@@ -3,5 +3,5 @@ from apps.products import views
 
 
 urlpatterns = [
-   path('product/<str:slug>/', views.ProductIndexView.as_view(), name='product_detail'),
+   path('product/<str:slug>/', views.detail_product, name='product_detail'),
 ]
