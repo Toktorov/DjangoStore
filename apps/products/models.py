@@ -61,6 +61,18 @@ class ProductImage(models.Model):
         verbose_name_plural = 'Изображении продуктов'
         ordering = ('-id',)
 
+class Like(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='likes_user')
+    products = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='likes_product')
+
+    def __str__(self):
+        return f"{self.products.title}"
+
+
+    class Meta:
+        verbose_name = 'Лайк'
+        verbose_name_plural = 'Лайки'
+        ordering = ('-id',)
 
 def slag_pre_save_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
